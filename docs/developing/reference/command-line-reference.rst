@@ -490,6 +490,30 @@ host and port, which may be necessary when using remote servers, like
 an AWS EC2 instance. More about `runserver
 <https://docs.djangoproject.com/en/stable/ref/django-admin/#runserver>`_.
 
+bulk_approve
+------------
+
+The ``bulk_approve`` command allows administrators to approve multiple
+pending edits or user modifications at once.
+
+**Usage:**
+
+.. code-block:: bash
+
+   python manage.py bulk_approve --user_ids 
+
+or
+
+.. code-block:: bash
+
+   python manage.py bulk_approve --user_names 
+
+**Options:**
+
+- ``--user_ids``: Approve edits by user numeric IDs.
+- ``--user_names``: Approve edits by usernames.
+- ``--dry-run``: Preview changes without applying them.
+
 collect static files
 --------------------
 
