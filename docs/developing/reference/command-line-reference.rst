@@ -474,7 +474,31 @@ Delete a MapBox Layer
 
 -n  The name of the Mapbox layer
 
+Provisional edits
+================
 
+Bulk approve
+------------
+
+The ``bulk_approve`` command allows administrators to approve multiple
+pending provisional edits or user modifications at once.
+
+**Usage:**
+
+.. code-block:: bash
+
+   python manage.py bulk_approve --user_ids <user_id1,user_id2,...> 
+
+or
+
+.. code-block:: bash
+
+   python manage.py bulk_approve --user_names <user_name1,user_name2,...>
+
+**Options:**
+
+- ``--user_ids``: Approve edits by user numeric IDs.
+- ``--user_names``: Approve edits by usernames.
 
 Other Useful Django Commands
 ============================
@@ -490,6 +514,7 @@ Run the Django dev server. Add ``0.0.0.0:8000`` to explicitly set the
 host and port, which may be necessary when using remote servers, like
 an AWS EC2 instance. More about `runserver
 <https://docs.djangoproject.com/en/stable/ref/django-admin/#runserver>`_.
+
 
 collect static files
 --------------------
